@@ -1,7 +1,16 @@
+<p align="center">
+  <img src="assets/hero-banner.png" alt="STAyzer" >
+</p>
+
 # STAyzer
 
 > **SSH Trust Analyzer for Linux Infrastructure**
 
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?logo=linux&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green)
+![CLI](https://img.shields.io/badge/Interface-CLI-2ea44f)
+![GitHub release](https://img.shields.io/github/v/release/hosnizaaraoui/STAYZER)
 STAyzer is a Python-based command-line tool that audits SSH trust relationships across Linux systems by analyzing users' `authorized_keys` files. It discovers who can access each machine, detects shared SSH keys, identifies potentially risky trust relationships, and generates detailed reports in both human-readable and machine-readable formats.
 
 Designed for Linux administrators, DevOps engineers, and security professionals, STAyzer makes it easy to audit SSH trust across dozens or hundreds of servers.
@@ -10,31 +19,35 @@ Designed for Linux administrators, DevOps engineers, and security professionals,
 
 ## Features
 
-* Audit local and remote Linux hosts
-* Analyze every user's `authorized_keys`
-* Automatically discover human users
-* Support multiple hosts using an inventory file
-* Detect custom `AuthorizedKeysFile` locations from `sshd_config`
-* Compute SHA256 fingerprints for every authorized SSH key
-* Detect shared SSH keys across hosts and users
-* Classify duplicate keys by severity
-* Filter analysis by user or host
-* Export reports as HTML and JSON
-* Generate clear console reports
-* Asynchronous SSH connections for improved performance
-* Secure by default with SSH host key verification
+- Audit local and remote Linux hosts
+- Analyze every user's `authorized_keys`
+- Automatically discover human users
+- Support multiple hosts using an inventory file
+- Detect custom `AuthorizedKeysFile` locations from `sshd_config`
+- Compute SHA256 fingerprints for every authorized SSH key
+- Detect shared SSH keys across hosts and users
+- Classify duplicate keys by severity
+- Filter analysis by user or host
+- Export reports as HTML and JSON
+- Generate clear console reports
+- Asynchronous SSH connections for improved performance
+- Secure by default with SSH host key verification
 
 ---
+
+> ## Screenshots
+>
+> Screenshots of STAyzer's output and reports are available in the **Screenshots** section below.
 
 # Why STAyzer?
 
 As infrastructures grow, it becomes increasingly difficult to answer questions like:
 
-* Which users have SSH access?
-* Is the same SSH key installed on multiple servers?
-* Are different users sharing the same private key?
-* Which service accounts reuse the same SSH credentials?
-* Which hosts could not be audited?
+- Which users have SSH access?
+- Is the same SSH key installed on multiple servers?
+- Are different users sharing the same private key?
+- Which service accounts reuse the same SSH credentials?
+- Which hosts could not be audited?
 
 Manually checking every `authorized_keys` file quickly becomes impractical.
 
@@ -48,7 +61,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/<hosnizaaraoui/STAYZER.git
-cd OOPS/STAyzer
+cd OOPS/STAYZER
 ```
 
 Create a virtual environment:
@@ -284,8 +297,8 @@ python main.py analyze \
 
 Supported formats:
 
-* HTML
-* JSON
+- HTML
+- JSON
 
 Example:
 
@@ -356,21 +369,21 @@ Each duplicate is classified according to its potential security impact.
 
 STAyzer generates a complete audit containing:
 
-* Scan information
-* Hosts analyzed
-* Users discovered
-* SSH keys found
-* SHA256 fingerprints
-* Duplicate key findings
-* Failed hosts
-* Scan statistics
-* Overall result
+- Scan information
+- Hosts analyzed
+- Users discovered
+- SSH keys found
+- SHA256 fingerprints
+- Duplicate key findings
+- Failed hosts
+- Scan statistics
+- Overall result
 
 Supported formats:
 
-* Console
-* HTML
-* JSON
+- Console
+- HTML
+- JSON
 
 ---
 
@@ -392,13 +405,13 @@ Only use this option in disposable or trusted laboratory environments.
 
 # Typical Use Cases
 
-* SSH trust auditing
-* Infrastructure security reviews
-* Linux server hardening
-* Internal security assessments
-* Detecting shared SSH credentials
-* Compliance verification
-* Periodic SSH access reviews
+- SSH trust auditing
+- Infrastructure security reviews
+- Linux server hardening
+- Internal security assessments
+- Detecting shared SSH credentials
+- Compliance verification
+- Periodic SSH access reviews
 
 ---
 
@@ -406,16 +419,88 @@ Only use this option in disposable or trusted laboratory environments.
 
 Future releases may include:
 
-* CSV export
-* Risk scoring
-* Interactive HTML reports
-* Graph visualization of SSH trust relationships
-* Key age analysis
-* Authorized principals support
-* CI/CD integration
-* Historical comparison between scans
-* Configuration file support
-* Additional security findings
+- Risk scoring
+- Interactive HTML reports
+- Key age analysis
+- Authorized principals support
+- Historical comparison between scans
+- Configuration file support
+- Additional security findings
+
+---
+
+# Screenshots
+
+## Verbose Analysis
+
+Live execution showing host discovery, user enumeration, and SSH key collection.
+
+<p align="center">
+  <img src="assets/screenshots/verbose.png" alt="verbose" width="800">
+</p>
+
+---
+
+## Shared Key Detection
+
+Example of a finding where the same SSH key is shared across multiple hosts or users.
+
+<p align="center">
+  <img src="assets/screenshots/duplicate-key.png" alt="Shared Key Detection" width="800">
+</p>
+
+---
+
+## Console Report
+
+Overview of the generated console report.
+
+<p align="center">
+  <img src="assets/screenshots/console-report1.png" alt="console-report-1" width="800">
+
+  <img src="assets/screenshots/console-report2.png" alt="console-report-2" width="800">
+
+</p>
+
+---
+
+## HTML Report Overview
+
+Overview section of the generated HTML report including scan statistics.
+
+<p align="center">
+  <img src="assets/screenshots/html-overview.png" alt="HTML Report Overview" width="800">
+</p>
+
+---
+
+## HTML Findings
+
+Security findings section showing detected duplicate keys with their severity levels.
+
+<p align="center">
+  <img src="assets/screenshots/html-findings.png" alt="HTML Findings" width="800">
+</p>
+
+---
+
+## Host Details
+
+Detailed view of a scanned host including discovered users and authorized SSH keys.
+
+<p align="center">
+  <img src="assets/screenshots/host-details.png" alt="Host Details" width="800">
+</p>
+
+---
+
+## Failed Hosts
+
+Example of a failed connection caused by authentication or host verification issues.
+
+<p align="center">
+  <img src="assets/screenshots/failed-hosts.png" alt="Failed Hosts" width="800">
+</p>
 
 ---
 
