@@ -61,8 +61,8 @@ STAyzer automates this process and provides a complete overview of your SSH trus
 Clone the repository:
 
 ```bash
-git clone https://github.com/<hosnizaaraoui/STAYZER.git
-cd OOPS/STAYZER
+git clone https://github.com/hosnizaaraoui/STAYZER.git
+cd STAYZER
 ```
 
 Create a virtual environment:
