@@ -11,6 +11,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![CLI](https://img.shields.io/badge/Interface-CLI-2ea44f)
 ![GitHub release](https://img.shields.io/github/v/release/hosnizaaraoui/STAYZER)
+
 STAyzer is a Python-based command-line tool that audits SSH trust relationships across Linux systems by analyzing users' `authorized_keys` files. It discovers who can access each machine, detects shared SSH keys, identifies potentially risky trust relationships, and generates detailed reports in both human-readable and machine-readable formats.
 
 Designed for Linux administrators, DevOps engineers, and security professionals, STAyzer makes it easy to audit SSH trust across dozens or hundreds of servers.
