@@ -1,11 +1,9 @@
 import asyncio
-
-import asyncssh
 import click
 
 from reports.html import export_html
 from reports.json import export_json
-from collectors.analyzer import analyze_ssh_trust, check_duplicate_keys
+from collectors.analyzer import analyze_ssh_trust
 from hosts.local import LocalHost
 from hosts.ssh import SSHHost
 from datetime import datetime
@@ -93,7 +91,7 @@ def _format_duration(seconds: float):
 
 @click.group()
 def cli():
-    """STAyazer - SSH Trust Analayzer."""
+    """STAyzer - SSH Trust Analayzer."""
     pass
 
 
